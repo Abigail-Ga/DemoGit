@@ -58,6 +58,7 @@ public class SuperPharm_Sanity {
 	
 	@BeforeMethod
 	public void beforeMethod(Method method) throws IOException {
+		//test
 		myTest = extent.startTest(method.getName());
 		myTest.log(LogStatus.INFO, "Starting test", "Start test");
 	}
@@ -73,7 +74,7 @@ public class SuperPharm_Sanity {
 	
 	@Test(priority = 1, enabled = false, description = "Check search results in site")
 	public void searchForProduct() throws InterruptedException, IOException {	
-		Assert.assertTrue(main.searchProduct("אקמול"), "Could notfind product");
+		Assert.assertTrue(main.searchProduct("×�×§×ž×•×œ"), "Could notfind product");
 		
 	}
 	
