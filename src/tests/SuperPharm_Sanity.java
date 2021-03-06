@@ -105,6 +105,13 @@ public class SuperPharm_Sanity {
 	}
 	
 	
+	@Test(priority = 4, enabled = false, description = "Remove product from cart")
+	public void removeProductFromCart_test() throws InterruptedException, IOException {	
+		main.goToCart();
+		Assert.assertTrue(cart.removeProductFromCart(), "Could not empty cart");
+		
+	}
+	
 	@AfterMethod
 	public void afterMethod(ITestResult result) throws IOException {
 
